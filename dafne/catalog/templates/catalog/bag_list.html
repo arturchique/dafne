@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Bag List</h1>
+
+{% if bag_list %}
+<ul>
+
+    {% for bag in bag_list %}
+    <li>
+        <a href="{{ bag.get_absolute_url }}">{{ bag.title }}</a>
+    </li>
+    {% endfor %}
+
+</ul>
+{% endif %}
+{% endblock %}

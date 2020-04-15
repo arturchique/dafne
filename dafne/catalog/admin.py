@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Bag, Material, Size
 
-# Register your models here.
+
+admin.site.register(Bag)
+admin.site.register(Material)
+admin.site.register(Size)

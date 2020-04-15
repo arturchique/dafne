@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ bag.title }}</h1>
+  <h3>Материалы:</h3>
+  {% for material in bag.material_set.all %}
+    <h4>    {{ bag.materials }}</h4>
+  {% endfor %}
+
+  <h3>{{ bag.summary }}</h3>
+  <h3>Размеры:</h3>
+  {% for size in bag.size_set.all %}
+    <h3>    {{ size }}</h3>
+  {% endfor %}
+
+{% endblock %}
